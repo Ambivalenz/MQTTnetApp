@@ -1,4 +1,4 @@
-﻿<Window xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,12 +7,10 @@
         d:DesignWidth="640"
         d:DesignHeight="340"
         Width="640"
-        ShowInTaskbar="False"
-        CanResize="False"
         Height="320"
         x:Class="MQTTnetApp.Controls.ErrorBox"
         d:DataContext="{d:DesignInstance controls:ErrorBoxViewModel}"
-        Title="Error">
+        >
     <Grid RowDefinitions="*,Auto,Auto">
         <TextBlock FontSize="18"
                    FontWeight="Light"
@@ -39,4 +37,4 @@
             </StackPanel>
         </Border>
     </Grid>
-</Window>
+</UserControl>

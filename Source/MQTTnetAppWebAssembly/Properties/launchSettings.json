@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AvaloniaBlazorSample": {
+    "SelfContained": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

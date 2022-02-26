@@ -1,7 +1,7 @@
 using Avalonia.ReactiveUI;
 using Avalonia.Web.Blazor;
 
-namespace MQTTnetAppWebAssembly.Web;
+namespace MQTTnetAppWebAssembly;
 
 public partial class App
 {

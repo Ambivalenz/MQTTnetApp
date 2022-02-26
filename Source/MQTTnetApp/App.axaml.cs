@@ -24,7 +24,7 @@ namespace MQTTnetApp;
 
 public sealed class App : Application
 {
-    static Window? _mainWindow;
+    //static Window? _mainWindow;
     readonly MainViewModel? _mainViewModel;
 
     readonly StateService _stateService;
@@ -61,18 +61,20 @@ public sealed class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-        {
-            _mainWindow = new MainWindow
-            {
-                DataContext = _mainViewModel
-            };
-
-            _mainWindow.Closing += OnMainWindowClosing;
-
-            desktop.MainWindow = _mainWindow;
-        }
-        else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
+        // if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        // {
+        //     _mainWindow = new MainWindow
+        //     {
+        //         DataContext = _mainViewModel
+        //     };
+        //
+        //     _mainWindow.Closing += OnMainWindowClosing;
+        //
+        //     desktop.MainWindow = _mainWindow;
+        // }
+         
+        
+        if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView = new MainView
             {
@@ -94,10 +96,10 @@ public sealed class App : Application
         var window = new ErrorBox
         {
             DataContext = viewModel,
-            WindowStartupLocation = WindowStartupLocation.CenterOwner
+            //WindowStartupLocation = WindowStartupLocation.CenterOwner
         };
 
-        window.ShowDialog(MainWindow.Instance);
+        //window.ShowDialog(MainWindow.Instance);
     }
 
     void OnMainWindowClosing(object? sender, CancelEventArgs e)

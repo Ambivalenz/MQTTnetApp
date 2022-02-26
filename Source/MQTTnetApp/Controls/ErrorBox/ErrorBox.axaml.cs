@@ -5,7 +5,7 @@ using Avalonia.Markup.Xaml;
 
 namespace MQTTnetApp.Controls;
 
-public sealed class ErrorBox : Window
+public sealed class ErrorBox : UserControl
 {
     public static readonly StyledProperty<string> MessageProperty = AvaloniaProperty.Register<ErrorBox, string>(nameof(Message));
 
@@ -27,6 +27,6 @@ public sealed class ErrorBox : Window
 
     void OnButtonCloseClicked(object? sender, RoutedEventArgs e)
     {
-        Close();
+        //Close();
     }
 }
